@@ -74,3 +74,15 @@ Route::get('/user/{name?}', function ($name='John') {
 });
 
 Route::resource('photos', PhotoController::class); 
+
+// Route::get('/greeting', function () { 
+//     return view('hello', ['name' => 'Alfin']); 
+// });
+
+// Modifikasi praktikum 3 langkah 6
+// Route::get('/greeting', function () { 
+//     return view('blog.hello', ['name' => 'Alfin']); 
+// });
+
+// Modifikasi praktikum 3 langkah 9
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
